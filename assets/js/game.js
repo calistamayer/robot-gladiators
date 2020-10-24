@@ -145,7 +145,7 @@ var endGame = function () {
 
   var highScore = Number(localStorage.getItem("highScore"));
 
-  if ( playerScore > highScore || highScore === null ) {
+  if (playerScore > highScore || highScore === null) {
     localStorage.setItem("highScore", playerScore);
     localStorage.setItem("leadingRobot", playerInfo.name);
     window.alert("Congratulations! " + localStorage.getItem("leadingRobot") + " beat the high score!");
@@ -153,8 +153,6 @@ var endGame = function () {
   else {
     window.alert(playerInfo.name + " did not beat the high score.");
   }
-
-
 
   // ask player if they'd like to play again 
   var playAgainConfirm = window.confirm("Would you like to play again?");
