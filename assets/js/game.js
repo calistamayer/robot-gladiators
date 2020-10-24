@@ -140,6 +140,17 @@ var endGame = function () {
   else {
     window.alert("You've lost your robot in battle.");
   }
+  var playerScore = playerInfo.money;
+  console.log("playerScore set to " + playerScore);
+
+  var highScore = Number(localStorage.getItem("highScore"));
+
+  if ( playerScore > highScore || highScore === null ) {
+    localStorage.setItem("highScore", playerScore);
+  }
+
+
+
   // ask player if they'd like to play again 
   var playAgainConfirm = window.confirm("Would you like to play again?");
 
