@@ -147,6 +147,11 @@ var endGame = function () {
 
   if ( playerScore > highScore || highScore === null ) {
     localStorage.setItem("highScore", playerScore);
+    localStorage.setItem("leadingRobot", playerInfo.name);
+    window.alert("Congratulations! " + localStorage.getItem("leadingRobot") + " beat the high score!");
+  }
+  else {
+    window.alert(playerInfo.name + " did not beat the high score.");
   }
 
 
